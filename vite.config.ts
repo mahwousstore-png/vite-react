@@ -18,14 +18,14 @@ export default defineConfig({
         },
       },
     },
-    // Target modern browsers for smaller bundle size
-    target: 'esnext',
+    // Target modern browsers for smaller bundle size (ES2020 for better compatibility)
+    target: 'es2020',
     // Reduce chunk size warnings threshold
     chunkSizeWarningLimit: 1000,
   },
   // Enable performance optimizations
   esbuild: {
-    // Remove console logs in production
-    drop: ['console', 'debugger'],
+    // Remove debugger statements in production
+    drop: ['debugger'],
   },
 })
